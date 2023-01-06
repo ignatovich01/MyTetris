@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="icon" type='image/png' sizes="32x32" href="./favicon.ico"></head>
+
+</head>
+<body>
+<style>
+html{
+    height:100%;
+    margin:0;
+    user-select:none;
+}
+ body{
+     background-color: black;
+     height: 100%;
+     width:100%;
+     margin:0;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+      }
+canvas{
+    border:2px solid white; 
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.right{
+    color:white;
+    width:200px;
+    height:100%;
+    margin-left: 20px;
+    font-size: 22px;
+}
+h2{
+    font-size: 36px;
+}
+.next{
+width:96px;
+height:96px;
+background-color: white;
+}
+#next_item{
+  border:none;  
+}
+.info{
+    color:white;
+    position:absolute;
+    left:10px;
+    top:10px;
+}
+</style>
+<audio class='audio1'  src="./positive_response_01.mp3" ></audio>
+<audio class='audio2'  src="./gameshow_03.mp3" ></audio>
+
+<div class="info">
+  <br>  Информация:
+  <br>  Score,Звуки,След Фигура,
+  <br>  Ускорение при повышении Score(5,10)
+  <br>  Возьмите на работу(
+
+
+</div>
+<div class='main'>
+    <canvas width="320" height="640" id="game"></canvas>
+    <div class="right">
+        <h2>Тетрис</h2>
+        <p class="score">Score: 0</p>
+        <canvas width="128" height="96" id="next_item"></canvas>
+    </div>
+</div>
+<script src="./script.js" alt='скрипт единственный '></script>
+
+</body>
+</html>
